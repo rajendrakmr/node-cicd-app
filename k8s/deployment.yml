@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-app-deployment
-  namespace: node-app
+  name: nodeapp-deployment
+  namespace: nodeapp
   labels:
-    app: node-app
+    app: nodeapp
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: node-app
+      app: nodeapp
   template:
     metadata:
       name: node-pod
-      namespace: node-app
+      namespace: nodeapp
       labels:
-        app: node-app
+        app: nodeapp
     spec:
       containers:
         - name: node-container
-          image: trainwithshubham/node-app-batch-6
+          image: rk0617/nodeapp:latest
           ports:
             - containerPort: 8000
           resources:
