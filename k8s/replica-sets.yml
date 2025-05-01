@@ -6,8 +6,7 @@ metadata:
   labels:
     app: guestbook
     tier: node-label
-spec:
-  # modify replicas according to your case
+spec: 
   replicas: 6
   selector:
     matchLabels:
